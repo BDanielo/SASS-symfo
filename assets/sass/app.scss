@@ -1,0 +1,9 @@
+body {
+  background-color: lightgray;
+}
+
+// Importation des abstracts
+@import "abstracts/_variables";
+
+@import "base/_reset";
+@import "base/_base";

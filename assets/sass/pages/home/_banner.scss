@@ -1,0 +1,19 @@
+.banner-hero {
+  &-img {
+    width: rem(150);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+
+  &-content {
+    @media screen and (min-width: 768px) {
+      width: 80%;
+    }
+  }
+
+  &-socials {
+    font-size: rem(40);
+  }
+
+
+}

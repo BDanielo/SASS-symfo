@@ -25,10 +25,10 @@ webpack_encore:
 
     # If you have multiple builds:
     # builds:
-        # frontend: '%kernel.project_dir%/public/frontend/build'
+        # Frontend: '%kernel.project_dir%/public/Frontend/build'
 
         # pass the build name as the 3rd argument to the Twig functions
-        # {{ encore_entry_script_tags('entry1', null, 'frontend') }}
+        # {{ encore_entry_script_tags('entry1', null, 'Frontend') }}
 
 framework:
     assets:

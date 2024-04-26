@@ -1,0 +1,9 @@
+.sidebar-list {
+  @include flexbox($gap: 2rem, $flex-direction: column, $align-items: stretch);
+
+  .card {
+    &-title {
+      @extend h4;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.d-flex{
+  @include flexbox(space-between, center, $gap: 1em);
+}
+
+.row {
+  @include flexbox($flex-wrap: wrap);
+
+  $columns: 12;
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      flex: 0 0 percentage(calc(1 / $columns * $i));
+      width: percentage(calc(1 / $columns * $i));
+    }
+
+    .col-sm-#{$i} {
+      flex: 0 0 100%;
+      width: 100%;
+
+      @media (min-width: 576px) {
+        flex: 0 0 percentage(calc(1 / $columns * $i));
+        width: percentage(calc(1 / $columns * $i));
+      }
+    }
+
+    .col-md-#{$i} {
+      flex: 0 0 100%;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        flex: 0 0 percentage(calc(1 / $columns * $i));
+        width: percentage(calc(1 / $columns * $i));
+      }
+    }
+
+    .col-lg-#{$i} {
+      flex: 0 0 100%;
+      width: 100%;
+
+      @media (min-width: 992px) {
+        flex: 0 0 percentage(calc(1 / $columns * $i));
+        width: percentage(calc(1 / $columns * $i));
+      }
+    }
+
+    .col-xl-#{$i} {
+      flex: 0 0 100%;
+      width: 100%;
+
+      @media (min-width: 1200px) {
+        flex: 0 0 percentage(calc(1 / $columns * $i));
+        width: percentage(calc(1 / $columns * $i));
+      }
+    }
+
+  }
+}
+

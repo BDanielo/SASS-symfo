@@ -4,6 +4,24 @@ body {
 
 // Importation des abstracts
 @import "abstracts/_variables";
+@import "abstracts/_functions";
+@import "abstracts/_mixins";
 
+// Importation des bases
 @import "base/_reset";
 @import "base/_base";
+@import "base/_typography";
+
+
+// Importation des layouts
+@import "layout/_header";
+
+// Importation des composants
+@import "components/_utilities";
+@import "components/_buttons";
+@import "components/_spacer";
+@import "components/_columns";
+@import "components/_card";
+
+// Importation des pages
+@import "pages/_home";

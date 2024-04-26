@@ -8,3 +8,11 @@ import './bootstrap.js';
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './sass/app.scss';
+
+// Import image
+import './images/img-profile.png';
+import './images/banner-competences.jpeg';
+import './images/banner-project.jpg';
+import './images/banner-projet-site-web.jpg';
+import './images/php-symfony.jpeg';
+import './images/vich-upload.jpeg';

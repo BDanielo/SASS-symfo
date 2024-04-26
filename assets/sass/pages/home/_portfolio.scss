@@ -1,0 +1,36 @@
+.portfolio {
+  &-wrapper {
+    width: 100%;
+    //overflow: hidden visible;
+  }
+
+  &-list {
+    @include flexbox($gap: 5rem, $flex-wrap: nowrap);
+
+    transform: translateX(rem(-1));
+
+    & > img {
+      width: 21%;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow-default;
+      aspect-ratio: 1/1.1;
+
+      $num-image: 5;
+      $rotation-angle: 5;
+
+      @for $i from 1 through $num-image {
+        $random-rotation: random() * 10 - $rotation-angle;
+
+        &.img-#{$i} {
+          transform: rotate(#{$random-rotation}deg);
+          transition: transform 0.3s ease-in-out;
+
+        }
+
+        &:hover  {
+          transform: rotate(0deg) scale(1.1);
+        }
+      }
+    }
+  }
+}

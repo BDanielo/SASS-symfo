@@ -1,0 +1,52 @@
+$base-space: 0.25rem;
+
+$space-map: (
+        "t": "top",
+        "b": "bottom",
+        "s": "left",
+        "e": "right",
+        "y": (
+                "top",
+                "bottom"
+        ),
+        "x": (
+                "left",
+                "right"
+        )
+);
+
+// Définition des classes de space
+@for $i from 1 through 10 {
+  @each $key, $value in $space-map {
+    @if $key == "y" or $key == "x" {
+      .m#{$key}-#{$i} {
+        @each $v in $value {
+          margin-#{$v}: $base-space * $i;
+        }
+      }
+
+      .p-#{$i} {
+          padding: $base-space * $i;
+      }
+    } @else {
+      .m#{$key}-#{$i} {
+        margin-#{$value}: $base-space * $i;
+      }
+
+      .p#{$key}-#{$i} {
+        padding-#{$value}: $base-space * $i;
+      }
+    }
+  }
+}
+
+// Définition des classes de margin auto
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}

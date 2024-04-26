@@ -1,0 +1,13 @@
+.card {
+  background: map-get($colors, primary);
+  border-radius: $border-radius;
+  padding: 1rem 1.5rem;
+  box-shadow: $box-shadow-default;
+  transition: all .3s ease-in-out;
+
+  &:not(.no-hover):hover {
+    background: darken(map-get($colors, primary), 10%);
+  }
+
+
+}

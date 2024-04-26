@@ -1,0 +1,19 @@
+@function getTextColor($color) {
+  @if (lightness($color) > 50) {
+    @return map-get($colors, "text-color");
+  } @else {
+    @return map-get($colors, "light");
+  }
+}
+
+@function rem($pixels, $base: 16) {
+  @return calc($pixels / $base) * 1rem;
+}
+
+@function getGradientCircle($color) {
+  @if (lightness($color) > 50) {
+    @return radial-gradient(circle, $color, darken($color, 20%));
+  } @else {
+    @return radial-gradient(circle, $color, lighten($color, 20%));
+  }
+}

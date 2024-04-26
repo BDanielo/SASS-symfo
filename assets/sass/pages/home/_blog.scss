@@ -1,0 +1,28 @@
+.blog-list {
+  @include flexbox($gap: 2rem, $flex-direction: column, $align-items: stretch);
+
+
+
+  .card {
+    &-title {
+      @extend h4;
+    }
+
+    &-date {
+      @extend .text-muted;
+      padding-left: 1em;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 1px;
+        width: 2px;
+        height: 100%;
+        background: #a1a1aa;
+        transform: translateY(-50%, -50%);
+      }
+    }
+  }
+}

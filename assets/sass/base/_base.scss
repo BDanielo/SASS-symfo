@@ -14,5 +14,19 @@ html {
     left: 5%;
     right: 5%;
     box-shadow: $box-shadow-default;
+    pointer-events: none;
   }
+}
+
+body {
+  background: getGradientCircle(map-get($colors, primary));
+  color: getTextColor(map-get($colors, primary));
+  overflow-x: hidden;
+}
+
+a {
+    transition: $transition-default;
+    &:hover {
+      color: map-get($colors, secondary);
+    }
 }

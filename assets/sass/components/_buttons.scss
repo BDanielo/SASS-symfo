@@ -1,0 +1,22 @@
+%btn {
+  padding: rem(10) rem(15);
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+@each $color, $value in $colors {
+  @if ($color != "text-color") {
+    .btn-#{$color} {
+      @extend %btn;
+
+      background: $value;
+      color: getTextColor($value);
+
+      &:hover {
+        background: darken($value, 10%);
+        color: getTextColor($value);
+      }
+    }
+  }
+}
